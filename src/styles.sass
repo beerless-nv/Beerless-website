@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+// Overschrijf BS variabelen en mixins
+@import "assets/stylesheets/variables"
+
+// Link naar BS en FA
+@import "~bootstrap/scss/bootstrap.scss"
+@import "~@fortawesome/fontawesome-free/css/all.min.css"
+
+// Eigen style files
+// Bootstrap componenten overschrijven
+@import "assets/stylesheets/navbar"
+@import "assets/stylesheets/navbar-mobile"
+@import "assets/stylesheets/tabset"
+@import "assets/stylesheets/card"
+@import "assets/stylesheets/toasts"
+
+// Eigen componenten en modules
+@import "assets/stylesheets/loading"
+@import "assets/stylesheets/hero"
+@import "assets/stylesheets/home"
+@import "assets/stylesheets/login"
+@import "assets/stylesheets/bieren"
+@import "assets/stylesheets/blog"
+@import "assets/stylesheets/users"
+@import "assets/stylesheets/skeleton"
+
+// Algemene stylesheet
+@import "assets/stylesheets/general"
