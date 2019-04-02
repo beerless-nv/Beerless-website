@@ -1,0 +1,200 @@
+.timeline {
+    padding: 5%;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    background: $yellow-light-2;
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.date {
+    display: none;
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 70px;
+
+    &.right .timeline-content {
+        float: right;
+    }
+
+    &.right .timeline-content .date {
+        right: auto !important;
+        left: 0 !important;
+    }
+
+    &.right .timeline-content::after {
+        content: '';
+        position: absolute;
+        width: 15px !important;
+        height: 15px;
+        right: -8.5px;
+        transform: rotate(45deg);
+        top: 64px !important;
+        background-color: #fff;
+        border: 1px solid;
+        border-color: transparent transparent rgba(0,0,0,.125) rgba(0,0,0,.125) ;
+        left: -8.5px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .timeline::before {
+        left: ($spacer*2);
+    }
+    .timeline .timeline-img {
+        left: ($spacer*2);
+    }
+    .timeline .timeline-content {
+        max-width: 100%;
+        width: auto;
+        margin-left: calc((1rem*2) + 30px);
+    }
+    .timeline .timeline-item.right .timeline-content {
+        float: none;
+    }
+    .timeline .timeline-item.right .timeline-content .date {
+        right: 0;
+        left: auto;
+    }
+    .timeline .timeline-item.right .timeline-content .inner-content {
+    }
+    .timeline .timeline-item.left .timeline-content {
+    }
+    .timeline .timeline-item.left .timeline-content .inner-content {
+    }
+    .timeline .timeline-item.left .timeline-content::after {
+        content: '';
+        position: absolute;
+        width: 15px !important;
+        height: 15px;
+        right: -8.5px;
+        transform: rotate(45deg);
+        top: 64px !important;
+        background-color: #fff;
+        border: 1px solid;
+        border-color: transparent transparent rgba(0,0,0,.125) rgba(0,0,0,.125) ;
+        left: -8.5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .timeline .timeline-item .left .timeline-content::after {
+        top: 64px !important;
+        border-color: transparent #fff transparent transparent;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .timeline-item.right .timeline-content::after {
+        display: none;
+    }
+
+    .timeline .timeline-item.left .timeline-content::after {
+        display: none;
+    }
+}
+
+.timeline-content {
+    position: relative;
+    width: 40%;
+    border-radius: 4px;
+    padding: ($spacer);
+    background-color: #fff;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.25s;
+    border: 1px solid rgba(0,0,0,.125);
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15px !important;
+        height: 15px;
+        right: -8.5px;
+        transform: rotate(45deg);
+        top: 64px !important;
+        background-color: #fff;
+        border: 1px solid;
+        border-color: rgba(0,0,0,.125) rgba(0,0,0,.125) transparent transparent;
+    }
+
+    .inner-content {
+        margin: 0 !important;
+    }
+}
+
+.timeline-img {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $super-light !important;
+    border: 5px solid $yellow-light-2;
+    font-weight: bold;
+
+    p {
+        height: 0;
+        line-height: 1;
+        color: $dark !important;
+    }
+}
+
+.timeline-card {
+    padding: 0 !important;
+}
+
+.timeline-card p {
+    padding: 0 20px;
+}
+
+.timeline-card a {
+    margin-left: 20px;
+}
+
+.no-content {
+    .timeline-content {
+        opacity: 0 !important;
+        min-height: 10em;
+    }
+
+    .timeline-img {
+        background: $primary !important;
+        border: 5px solid $primary;
+
+        p {
+            color: #fff !important;
+        }
+    }
+}
+
+.no-image {
+    .timeline-content::after {
+        display: none;
+    }
+    .timeline-img {
+        opacity: 0;
+    }
+}
