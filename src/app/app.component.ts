@@ -2,11 +2,11 @@ import {ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID} from '@angula
 import {ActivatedRoute, NavigationEnd, NavigationStart, Router} from '@angular/router';
 import {isPlatformBrowser, LocationStrategy} from '@angular/common';
 import {SwUpdate} from '@angular/service-worker';
-import {BsModalRef, BsModalService} from 'ngx-bootstrap';
-import {AgeVerificationComponent} from './sharedComponents/age-verification/age-verification.component';
-import {NgbActiveModal, NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
+import {BsModalRef} from 'ngx-bootstrap';
+import {NgbModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 import {CookieService} from 'ngx-cookie-service';
-import {IeWarningComponent} from './sharedComponents/ie-warning/ie-warning.component';
+import {AgeVerificationComponent} from './shared/components/age-verification/age-verification/age-verification.component';
+import {IeWarningComponent} from './shared/components/ie-warning/ie-warning/ie-warning.component';
 
 @Component({
     selector: 'app-root',

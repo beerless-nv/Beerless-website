@@ -1,0 +1,22 @@
+.policies {
+    h5 {
+        margin-bottom: ($spacer * 1.5);
+    }
+    section {
+        margin-bottom: ($spacer * 4);
+    }
+    ol {
+        list-style: none;
+        counter-reset: listStyle;
+        li {
+            counter-increment: listStyle;
+            margin-bottom: ($spacer * 0.5);
+
+            &::before {
+                content: "(" counter(listStyle, lower-alpha) ")";
+                font-weight: 600;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

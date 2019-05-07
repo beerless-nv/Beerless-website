@@ -1,11 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './pagegroups/home/home.component';
-import {RoadmapComponent} from './pagegroups/roadmap/roadmap.component';
 
 const routes: Routes = [
-    {path: 'home', component: HomeComponent},
-    {path: 'roadmap', component: RoadmapComponent},
+    {path: 'home', loadChildren: './modules/home/home.module#HomeModule'},
+    {path: 'roadmap', loadChildren: './modules/roadmap/roadmap.module#RoadmapModule'},
+    {path: 'policies', loadChildren: './modules/policies/policies.module#PoliciesModule'},
 
 
     // Homepage doorverwijzen naar home

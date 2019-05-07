@@ -3,9 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  backend: 'http://localhost:3000/api/',
-  imageURL: 'https://assets.beerless.be/images/',
+    production: false,
+    backend: 'http://localhost:3000/api/',
+    imageURL: 'https://assets.beerless.be/images/',
+    appURL: 'http://localhost:4200/',
+    websiteURL: 'http://localhost:4201/'
 };
 
 /*
