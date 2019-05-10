@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
 
     imageUrl = environment.imageURL;
     date = (new Date()).getFullYear();
+    appUrl = environment.appURL;
 
     constructor() {
     }

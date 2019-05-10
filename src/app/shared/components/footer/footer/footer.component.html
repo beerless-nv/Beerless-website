@@ -1,10 +1,10 @@
 <footer class="bg-dark mt-5">
     <div class="container container-no-p">
-        <div class="row justify-content-md-between pt-5 pb-2 text-grey p-0 m-0">
-            <div class="col-lg-4 col-sm-8 col-12 order-sm-0 order-1 p-0 my-lg-0 my-4">
+        <div class="row justify-content-md-between py-5 pb-2 text-grey p-0 m-0">
+            <div class="col-lg-4 col-sm-8 col-12 order-sm-0 order-1 p-0 pb-0 pt-4 pt-sm-0">
                 <div class="d-flex flex-column col-12 p-0 d-flex align-items-sm-start align-items-center">
                     <span class="small mt-1">Follow us</span>
-                    <div class="row container p-0 m-0 mt-2 d-flex justify-content-sm-start justify-content-center">
+                    <div class="row p-0 m-0 mt-2 d-flex justify-content-sm-start justify-content-center">
                         <a class="btn btn-grey-dark text-grey icon-block" href="https://www.facebook.com/IAmBeerless/"
                            target="_blank" role="button"><i
                             class="fab fa-facebook-f"></i></a>
@@ -13,22 +13,15 @@
                            role="button"><i
                             class="fab fa-youtube"></i></a>
                         <a class="btn btn-grey-dark text-grey icon-block ml-2" href="mailto:info@beerless.be"
-                           target="_blank" role="button"><i
+                           role="button"><i
                             class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-12 order-lg-1 order-2 p-0 pt-1">
-                <!--<form action="">-->
-                <label for="subscribe" class="small d-flex justify-content-sm-start justify-content-center">Subscribe to our newsletter</label>
-                <div class="input-group mb-3">
-                    <input type="email" class="form-control input-dark"
-                           placeholder="Email address" id="subscribe" name="subscribe">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary text-dark" type="submit">Subscribe</button>
-                    </div>
-                </div>
-                <!--</form>-->
+            <div class="col-lg-4 col-12 order-lg-1 order-2 p-0 pt-lg-1 text-center pt-4">
+                <label class="small text-center d-block">Sign up to
+                    Beerless</label>
+                <a [href]="appUrl + 'sign-up'" class="btn btn-outline-grey px-5">Sign up <i class="fas fa-chevron-right ml-2"></i></a>
             </div>
             <div
                 class="col-lg-4 col-sm-4 col-12 order-lg-2 order-sm-1 order-0 d-flex align-items-sm-end align-items-center flex-column p-0 pt-1 my-auto">
@@ -41,23 +34,19 @@
 
         <div class="divider-dark"></div>
 
-        <div class="py-3 text-grey small d-flex justify-content-md-between align-items-center flex-md-row flex-column">
-            <span>
-                Copyright {{date}} &copy; <strong>Beerless</strong>. All Rights Reserved.
-            </span>
-            <span class="text-grey-dark">|</span>
-            <span>
-                 Kempische Steenweg 311, 3500 Hasselt
-            </span>
-            <span class="text-grey-dark">|</span>
-            <span>
-                 BE 069.1905.750
-            </span>
-            <span class="text-grey-dark">|</span>
-            <span>
+        <div class="py-3 text-grey small d-flex flex-wrap col-12 px-0">
+            <div class="col-lg-4 col-12 px-0 d-flex justify-content-lg-start align-items-lg-start align-items-center flex-column">
+                <div><strong>Beerless</strong></div>
+                <div>Kempische Steenweg 311, 3500 Hasselt</div>
+                <div>BE 069.1905.750</div>
+            </div>
+            <div class="col-lg-4 col-12 px-0 d-flex align-items-center justify-content-center py-lg-0 py-3">
+                Copyright {{date}}&nbsp;&copy;&nbsp;<strong>Beerless</strong>.
+            </div>
+            <div class="col-lg-4 col-12 px-0 d-flex align-items-center justify-content-lg-end justify-content-center">
                 <a routerLink="/policies/privacy" class="mr-2 text-grey font-weight-bold">Privacy policy</a>
                 <a routerLink="/policies/cookie" class="text-grey font-weight-bold">Cookie policy</a>
-            </span>
+            </div>
         </div>
     </div>
 </footer>

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {environment} from '../../../../../../environments/environment';
 
 @Component({
     selector: 'app-hero-subscribe',
@@ -7,6 +7,8 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
     styles: []
 })
 export class HeroSubscribeComponent implements OnInit {
+
+    appUrl = environment.appURL;
 
     constructor() {
     }

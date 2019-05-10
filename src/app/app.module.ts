@@ -13,6 +13,7 @@ import {ModalModule} from './shared/components/modal/modal.module';
 import {IeWarningModule} from './shared/components/ie-warning/ie-warning.module';
 import {NavbarModule} from './shared/components/navbar/navbar.module';
 import {FooterModule} from './shared/components/footer/footer.module';
+import {GoogleAnalyticsService} from './core/google-analytics/google-analytics.service';
 
 @NgModule({
     declarations: [
@@ -33,9 +34,11 @@ import {FooterModule} from './shared/components/footer/footer.module';
     ],
     providers: [
         CookieService,
+        GoogleAnalyticsService
     ],
     bootstrap: [AppComponent],
     entryComponents: []
 })
 export class AppModule {
+    constructor(protected _googleAnalyticsService: GoogleAnalyticsService) { }
 }
