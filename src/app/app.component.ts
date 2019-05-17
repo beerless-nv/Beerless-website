@@ -182,14 +182,15 @@ export class AppComponent implements OnInit {
     }
 
     ageVerification() {
-        const options: NgbModalOptions = {
-            centered: true,
-            backdrop: 'static',
-            backdropClass: 'backdrop',
-            keyboard: false,
-        };
+        if (!this.cookieService.get('legal_age')) {
+            // document.cookie.split('; ').filter(cookie => cookie.indexOf('legalAge') > -1).filter(cookie => cookie.indexOf('true') > -1).length === 0
+            const options: NgbModalOptions = {
+                centered: true,
+                backdrop: 'static',
+                backdropClass: 'backdrop',
+                keyboard: false,
+            };
 
-        if (!this.cookieService.get('legalAge')) {
             this.modalService.open(AgeVerificationComponent, options);
         }
     }

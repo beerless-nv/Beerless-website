@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
-        const accessToken = this.cookieService.get('accessToken');
+        const accessToken = this.cookieService.get('access_token');
         if (accessToken) {
             this.isLogged = true;
         }

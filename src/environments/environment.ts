@@ -4,6 +4,7 @@
 
 export const environment = {
     production: false,
+    domain: 'localhost',
     backend: 'http://localhost:3000/api/',
     imageURL: 'https://assets.beerless.be/images/',
     appURL: 'http://localhost:4200/',
