@@ -5,6 +5,7 @@ const routes: Routes = [
     {path: 'home', loadChildren: './modules/home/home.module#HomeModule'},
     {path: 'roadmap', loadChildren: './modules/roadmap/roadmap.module#RoadmapModule'},
     {path: 'policies', loadChildren: './modules/policies/policies.module#PoliciesModule'},
+    {path: 'contact', loadChildren: './modules/contact/contact.module#ContactModule'},
 
 
     // Homepage doorverwijzen naar home

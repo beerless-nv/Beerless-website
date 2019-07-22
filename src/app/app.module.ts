@@ -15,6 +15,8 @@ import {NavbarModule} from './shared/components/navbar/navbar.module';
 import {FooterModule} from './shared/components/footer/footer.module';
 import {GoogleAnalyticsService} from './core/google-analytics/google-analytics.service';
 import {CookiePopupModule} from './shared/components/cookie-popup/cookie-popup.module';
+import {HttpClientModule} from '@angular/common/http';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
     declarations: [
@@ -32,7 +34,9 @@ import {CookiePopupModule} from './shared/components/cookie-popup/cookie-popup.m
         IeWarningModule,
         NavbarModule,
         FooterModule,
-        CookiePopupModule
+        CookiePopupModule,
+        HttpClientModule,
+        CoreModule
     ],
     providers: [
         CookieService,
