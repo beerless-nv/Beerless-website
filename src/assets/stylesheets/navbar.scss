@@ -220,3 +220,16 @@ nav {
 .mr-1rem {
     margin-right: 1rem;
 }
+
+.nav-item-cta {
+    background-color: $primary;
+    color: #fff !important;
+    border-radius: 0.25rem;
+    text-shadow: 1px 1px #F89F2F;
+    transition: background-color 0.15s ease-in-out;
+
+    &:hover {
+        background-color: #F89F2F;
+        transition: background-color 0.15s ease-in-out;
+    }
+}

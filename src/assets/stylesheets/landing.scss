@@ -1,0 +1,74 @@
+#landing {
+    .hero {
+        height: 75vh;
+        @include media-breakpoint-down(md) {
+            height: calc(85vh - 80px);
+        }
+        background-image: url('https://assets.beerless.be/images/backgrounds/landing-page.jpg');
+    }
+
+    .sub-hero {
+        position: relative;
+        height: calc(25vh - 80.6px);
+        @include media-breakpoint-down(md) {
+            height: 15vh;
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+        }
+
+        #landing-stats {
+            position: absolute;
+            top: -50%;
+            left: 0;
+
+            &.card {
+                height: 100%;
+                border: none;
+
+                .card-body {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+
+            .landing-stat {
+                h3 {
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+#landing-container {
+    position: relative;
+}
+
+#landing-content {
+}
+
+#landing-sticky-container {
+    position: absolute;
+    right: 0;
+    height: calc(100% + 100vh);
+    top: -100vh;
+
+    #landing-cta-card {
+        position: sticky;
+        right: 0;
+        top: 140px;
+
+
+        .card {
+            border: none;
+        }
+    }
+}

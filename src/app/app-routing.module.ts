@@ -6,6 +6,7 @@ const routes: Routes = [
     {path: 'roadmap', loadChildren: './modules/roadmap/roadmap.module#RoadmapModule'},
     {path: 'policies', loadChildren: './modules/policies/policies.module#PoliciesModule'},
     {path: 'contact', loadChildren: './modules/contact/contact.module#ContactModule'},
+    {path: 'bèta', loadChildren: './modules/landing-page/landing-page.module#LandingPageModule'},
 
 
     // Homepage doorverwijzen naar home
