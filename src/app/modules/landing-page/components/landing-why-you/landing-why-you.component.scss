@@ -1,0 +1,97 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~src/styles.sass";
+
+.landing-title {
+    font-weight: bold;
+}
+
+.loader-container {
+    height: 5px;
+    margin-bottom: $spacer;
+
+    .loader {
+        width: 100%;
+        height: 100%;
+        animation: 20s loading linear infinite;
+        background-color: $primary;
+    }
+
+    @-webkit-keyframes loading {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+    @keyframes loading {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+}
+
+.showContent {
+    opacity: 1;
+    animation: 200ms show;
+
+    @-webkit-keyframes show {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes show {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.hideContent {
+    opacity: 0;
+    animation: 200ms hide;
+
+    @-webkit-keyframes hide {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    @keyframes hide {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+}
+
+.landing-list {
+    counter-reset: list-counter;
+
+    .card {
+        background-color: transparent;
+        position: relative;
+
+        .card-body {
+            padding-top: 36px;
+        }
+    }
+
+    .landing-sub-title {
+        font-weight: bold;
+        color: $muted;
+    }
+}

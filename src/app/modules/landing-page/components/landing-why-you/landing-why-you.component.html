@@ -1,0 +1,12 @@
+<div class="mt-5" #container>
+    <div class="loader-container" *ngIf="loading">
+        <div class="loader"></div>
+    </div>
+    <h1 class="landing-title mb-5">
+        You are the perfect tester if you love
+        <span class="text-primary" [typedText]="content[teller].title" [pace]="pace" [delay]="0"></span>.
+    </h1>
+    <div class="landing-content" [class.showContent]="loadContent" [class.hideContent]="!loadContent">
+        {{content[teller].description}}
+    </div>
+</div>
