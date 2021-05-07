@@ -34,7 +34,7 @@
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "fstream": "^1.0.12",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "js-yaml": "^3.13.1",
     "jwt-decode": "^2.2.0",
     "ngx-bootstrap": "^3.0.1",
